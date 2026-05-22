@@ -36,6 +36,10 @@ const Blog = () => {
                 border-primary/35 bg-primary/5 font-medium text-primary'>
               Michael Brown</p>
          </div>
+         <div className='mx-5 max-w-5xl md:mx-auto my-10 mt-6'>
+              <img src={data.image} alt=''
+                   className='rounded-3xl mb-5'/>
+         </div>
     </div>
   ) : <div>Loading....</div>
 }
