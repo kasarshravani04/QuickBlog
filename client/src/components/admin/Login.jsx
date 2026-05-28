@@ -1,12 +1,15 @@
 import { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Login = () => {
-
+  const navigate = useNavigate()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
   const handleSubmit = async (e) =>{
     e.preventDefault()
+    // Replace this with real auth logic later
+    navigate('/admin/dashboard')
   }
 
   return (
@@ -39,6 +42,10 @@ const Login = () => {
                       Login
                     </button>
                 </form>
+                <p className='text-sm text-center text-gray-500 mt-6'>
+                  Don't have an account?{' '}
+                  <Link to='/admin/register' className='text-primary font-medium'>Register</Link>
+                </p>
            </div>
        </div>
     </div>
